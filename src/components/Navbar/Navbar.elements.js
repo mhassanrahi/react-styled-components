@@ -22,7 +22,6 @@ export const NavbarContainer = styled(Container)`
     justify-content: space-between;
     height: 80px
 
-
     ${Container}
 `;
 
@@ -42,7 +41,6 @@ export const NavIcon = styled(FaReact)`
 
 export const Hamburger = styled.div `
     display: none;
-
 
     @media screen and (max-width:960px) {
         display: block;
@@ -70,7 +68,7 @@ export const NavMenu = styled.ul`
         top: 80px;
         left: ${({click}) => (click ? 0: '-100%')};
         opacity: 1;
-        treansion: all 0.5s ease;
+        transition: all 0.5s ease;
         background: #4C93DB
     }
 `;
@@ -111,4 +109,26 @@ export const NavLinks = styled(Link)`
         }
 
     }
+`;
+
+export const NavItemBtn = styled.li`
+    @media screen and (max-width: 960px) {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        height: 120px;
+    }
+`;
+
+export const NavBtnLink = styled(Link)`
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration: none;
+    padding: 8px 16px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
 `;

@@ -22,6 +22,28 @@ padding-right: 50px;
     padding-left:30px;
     padding-right:30px;
 }
-`
+`;
+
+export const Button = styled.button`
+    border-radius: 4px;
+    background: ${({primary}) =>(primary ? '#DB944C' : '#DB944C')};
+    white-space: nowrap;
+    padding: ${({big}) => (big ? '12px 64px' : '10px 20px')};
+    font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+
+    &:hover {
+        transition: all 0.3s ease-out;
+        color: #DB944C;
+        background: ${({primary}) =>(primary ? '#fff' : '#DB944C')};
+    }
+
+    @media screen and (max-width: 960px) {
+        width: 100%;
+    }
+`;
 
 export default GlobalStyle;
